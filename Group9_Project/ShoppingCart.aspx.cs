@@ -11,6 +11,9 @@ namespace Group9_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label1.Text = (string)Session["pName"];
+            Label2.Text = (string)Session["Desc"];
+            Label3.Text = (string)Session["Price"];
 
         }
     }

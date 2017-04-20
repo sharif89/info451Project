@@ -24,22 +24,17 @@
   <br />
   <br />
  
-    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Name" Width="205px">
-    </asp:DropDownList>
-    <asp:Button ID="Button1" runat="server" Text="View Detail" />
+ 
+   
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:spring17_g9ConnectionString %>" SelectCommand="SELECT * FROM [Product]"></asp:SqlDataSource>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ProductID" DataSourceID="SqlDataSource2" Width="792px">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Product ID" DataSourceID="SqlDataSource1" Width="792px">
         <Columns>
-            <asp:BoundField DataField="ProductID" HeaderText="ProductID" ReadOnly="True" SortExpression="ProductID" />
+            <asp:BoundField DataField="Product ID" HeaderText="Product ID" ReadOnly="True" SortExpression="Product ID" />
             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
             <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+            <asp:BoundField DataField="Stock" HeaderText="Stock" SortExpression="Stock" />
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:spring17_g9ConnectionString %>" SelectCommand="SELECT * FROM [Product] WHERE ([Name] = @Name)">
-        <SelectParameters>
-            <asp:ControlParameter ControlID="DropDownList1" Name="Name" PropertyName="SelectedValue" Type="String" />
-        </SelectParameters>
-    </asp:SqlDataSource>
-      
+          
 </asp:Content>
