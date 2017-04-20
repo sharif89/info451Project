@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Group9_Project.master.cs" Inherits="Group9_Project.Group9_Project" %>
+
+<%@ Register src="Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="Footer.ascx" tagname="Footer" tagprefix="uc2" %>
+<%@ Register Src="NavBar.ascx"  TagName="NavBar"TagPrefix="uc3" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>KSZ Phone Cases</title>
+    
+    <style type="text/css">
+        body {
+            background-color: black;
+            color: coral;
+            text-align: center;
+        }
+        MainDisplay {
+            margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        width: 900px;
+        height: 450px;
+        background-color: #DDD;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <header>
+        <uc1:Header ID="Header1" runat="server" />
+      </header>
+
+        <nav><uc3:NavBar  id="NavBar" runat="server" /></nav>
+        <br /><br />
+       
+        <asp:ContentPlaceHolder id="MainDisplay" runat="server">
+         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </asp:ContentPlaceHolder>
+        </div>
+  <div>
+     <footer> <uc2:Footer ID="Footer1" runat="server" /></footer>
+        </div>
+    </form>
+</body>
+</html>
